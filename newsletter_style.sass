@@ -1,0 +1,73 @@
+$bg_color : #eeeedd
+$body_color: #ddddcc
+$wrapper_width : 600px
+$td_padding: 20px
+$dark_grey: #313131
+$light_grey: #4b4b55
+$lightest_grey: $bg_color
+$guts_orange: #F68C22
+$white: #ffffff
+
+body
+    font-family: Helvetica, Arial, sans-serif
+    font-size: 14px
+    color: $light_grey
+    background-color: $body_color
+    width: $wrapper_width
+    margin-left: auto
+    margin-right: auto
+
+table 
+    width: 100%
+
+    & > tbody
+        &.maintable
+            & > tr
+                width: $wrapper_width
+
+                & > td 
+            
+            .header
+                height: 120px
+
+    &.content 
+        border-collapse: separate
+        border-spacing: 20px
+
+        & > tbody 
+            & > tr 
+                width: ($wrapper_width - ($td_padding * 2))
+                background-color: $bg_color
+                & > td:first-child 
+                    padding: $td_padding
+                    border-left: 4px solid $guts_orange
+        img 
+            padding-left: 12px
+
+    &.dates
+        border-spacing: 4px
+        tr td:first-child
+            font-weight: bold
+            text-align: right
+
+    tfoot
+        font-size: 12px
+        color: #888888
+
+h1, h2
+    padding: 0
+    margin: 0
+    margin-bottom: 8px
+    color: $light_grey
+
+p
+    padding: 0
+    margin: 0
+    margin-bottom: 8px
+
+a
+    color: $guts_orange
+
+    &:hover
+        color: $lightest_grey
+        background-color: $guts_orange
