@@ -67,21 +67,47 @@ $(document).ready()
             }); 
         }
     });
+
+     //Preview Button Listener
+    $('input[name="show_preview"]').click(function()
+    {
+        var $frame = $('iframe#preview');
+
+        if(!$($frame).is(":visible"))
+        {
+            $frame.show();
+            $(this).val("Hide Preview");
+        }
+        else
+        {
+            $(this).val("Show Preview");
+            $frame.hide();
+        }
+    });
     
     
     $('input[name="build"]').click(function()
     {
         //create new window for preview
-        var previewWindow = window.open();
-        var previewContent = $('<style>');
+        // var previewWindow = window.open(null, "preview");
+        var previewStyle = $('<style>');
+        $(previewStyle).load("../newsletter_style.css") ;
+        // $(previewWindow.document.head).append(previewStyle);
+        // previewWindow.document.title = "Preview Newsletter";
+        
+        var previewContent = $('<body>');
+        previewContent
 
-        console.log($(previewContent).html());
-        $(previewWindow.document.body).load("../newsletter_template.html"); 
+        // var title = $('input[name="title"]', form).val();
+        // $('h1', previewContent).html("Hello World");
+        // console.log($('h1', previewContent).html());
 
-        $(previewContent).load("../newsletter_style.css") ;
-        $(previewWindow.document.head).append(previewContent);
-        previewWindow.document.title = "Preview Newsletter";
+        var $frame = $('iframe#preview');
+        var doc = $frame[0].contentWindow.document;
+        var $head = $('head', doc);
+        var $body = $('body', doc);
 
-        $("section#preview").html($(previewContent).html())
+        $head.html(previewStyle);
+        $body.load("../newsletter_template.html");
     });
 }
