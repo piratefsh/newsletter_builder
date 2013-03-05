@@ -13,19 +13,19 @@
 
 <body>
 <div id="wrapper">
-<h1>GUTS CE Newsletter Builder</h1>
+<h1>Newsletter Builder - CE</h1>
 <h2>STEP 1: Basic Info</h2>
 <section>
 <form id = "basic">
     <div class="form_elem">
         <label for="title">Title</label>
         <label class="helper">e.g 'Exiciting CE Events This Week!'</label>
-        <input type="text" name="title"/>
+        <input type="text" value="{TITLE}" name="title"/>
     </div>
     <div class="form_elem">
         <label for="issue">Date of Issue</label>
         <label class="helper">e.g May 5th, 2013</label>
-        <input type="text" name="issue"/>
+        <input type="text" value="{ISSUE}"  name="issue"/>
     </div>
 
     <h2>STEP 2: Add Stories</h2>
@@ -33,7 +33,7 @@
         <div class="form_elem">
             <label for="title">Story Title</label>
             <label class="helper">e.g. CE Kickoff This Thursday</label>
-            <input type="text" name="title"/>
+            <input type="text" name="title" value="{CE Kickoff This Thursday}"/>
         </div>
         
         <div class="form_elem">
@@ -56,23 +56,23 @@
             
             <div class="datesubgroup">
                 <label class="sublabel">Date</label>
-                <input type="text" name="date"/> 
+                <input type="text" name="date" value="May 15, 2013"/> 
             </div>
             <div class="datesubgroup">
                 <label class="sublabel">Time</label>
-                <input type="text" name="time"/> 
+                <input type="text" name="time" value="5pm to 6pm"/> 
             </div>
             <div class="datesubgroup">
                 <label class="sublabel">Venue</label>
-                <input type="text" name="venue"/> 
+                <input type="text" name="venue" value="Memorial Union, TITU"/> 
             </div>
         </div>
         </div>
         
         <div class="form_elem">
-            <label for="fileloc">Image URL</label>
+            <label for="imageurl">Image URL</label>
             <label class="helper">Image must be no larger than 300px by 300px and must be uploaded somewhere. Enter url below. Leave blank if no image desired</label>
-            <input type="text" name="fileloc"/>
+            <input type="text" name="imageurl"/>
         </div>
     </div>
     
@@ -100,6 +100,10 @@
 
 
 </section>
+
+<footer>
+    <p>This Newsletter Builder was created by Sher Minn Chong, Webmaster at The Greater University Tutoring Service (GUTS) at the University of Wisconsin-Madison, 2012-2013. Contact her at sherminn[dot]chong[at]gmail[dot]com.</p>
+</footer>
 </div>
 
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
