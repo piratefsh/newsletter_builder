@@ -1,0 +1,111 @@
+@charset "utf-8"
+
+$orange: #F68C22
+
+body
+  font-family: 'Source Sans', Helvetica, Arial, sans-serif
+  color: #444
+  background: url(../imgs/ce_newsletter.png)
+
+h1
+  text-align: center
+  padding: 12px
+  border-bottom: 1px solid #ccc
+  clear: both
+
+h2
+  clear: both
+  color: $orange
+
+#wrapper
+  width: 600px
+  margin: 24px auto
+  padding: 24px
+  background-color: #eee
+
+form input, textarea
+  display: block
+  margin-top: 8px
+  border: 1px solid #ccc
+  padding: 4px
+
+form div.story
+  background-color: #FFF
+  margin-top: 12px
+  padding: 12px
+
+textarea
+  width: 50%
+  height: 50px
+  border: 1px solid #ccc
+  font-family: 'Source Sans', Helvetica, Arial, sans-serif
+  font-size: small
+
+div
+  overflow: auto
+  &.form_elem
+    margin: 24px auto
+    width: 100%
+  &.dategroup
+    display: table
+
+    .datesubgroup
+      display: table-row
+      input
+        display: table-cell
+        margin-left: 12px
+      label.sublabel
+        color: #666
+        text-align: right
+        display: table-cell
+        width: 80px
+
+label
+  font-weight: bold
+  &.helper
+    display: block
+    font-size: small
+    font-style: italic
+    font-weight: normal
+    color: #666
+  &.sublabel
+    font-size: small
+    display: inline
+
+input
+  &[type="radio"]
+    display: inline
+  &[type="button"]
+    float: left
+    background-color: #ccc
+    margin-left: 8px
+    width: 30px
+    height: 30px
+    font-size: 18px
+    color: #fff
+    padding: 0
+    border: none
+    &:active
+      background-color: $orange
+  &[name="build"]
+    &:active
+      background-color: #333
+    float: right
+    background-color: #F68C22
+    clear: right
+    color: #fff
+    font-size: 18px
+    font-weight: bold
+    padding: 8px
+    width: auto
+    height: auto
+    border: none
+
+section
+  clear: both
+  padding-bottom: 30px
+  border-bottom: 1px solid #ccc
+
+textarea#output
+  width: 100%
+  height: 300px

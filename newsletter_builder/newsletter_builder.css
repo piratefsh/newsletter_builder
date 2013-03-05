@@ -1,0 +1,105 @@
+body {
+  font-family: "Source Sans", Helvetica, Arial, sans-serif;
+  color: #444444;
+  background: url(../imgs/ce_newsletter.png); }
+
+h1 {
+  text-align: center;
+  padding: 12px;
+  border-bottom: 1px solid #cccccc;
+  clear: both; }
+
+h2 {
+  clear: both;
+  color: #f68c22; }
+
+#wrapper {
+  width: 600px;
+  margin: 24px auto;
+  padding: 24px;
+  background-color: #eeeeee; }
+
+form input, textarea {
+  display: block;
+  margin-top: 8px;
+  border: 1px solid #cccccc;
+  padding: 4px; }
+
+form div.story {
+  background-color: white;
+  margin-top: 12px;
+  padding: 12px; }
+
+textarea {
+  width: 50%;
+  height: 50px;
+  border: 1px solid #cccccc;
+  font-family: "Source Sans", Helvetica, Arial, sans-serif;
+  font-size: small; }
+
+div {
+  overflow: auto; }
+  div.form_elem {
+    margin: 24px auto;
+    width: 100%; }
+  div.dategroup {
+    display: table; }
+    div.dategroup .datesubgroup {
+      display: table-row; }
+      div.dategroup .datesubgroup input {
+        display: table-cell;
+        margin-left: 12px; }
+      div.dategroup .datesubgroup label.sublabel {
+        color: #666666;
+        text-align: right;
+        display: table-cell;
+        width: 80px; }
+
+label {
+  font-weight: bold; }
+  label.helper {
+    display: block;
+    font-size: small;
+    font-style: italic;
+    font-weight: normal;
+    color: #666666; }
+  label.sublabel {
+    font-size: small;
+    display: inline; }
+
+input[type="radio"] {
+  display: inline; }
+input[type="button"] {
+  float: left;
+  background-color: #cccccc;
+  margin-left: 8px;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  color: white;
+  padding: 0;
+  border: none; }
+  input[type="button"]:active {
+    background-color: #f68c22; }
+input[name="build"] {
+  float: right;
+  background-color: #f68c22;
+  clear: right;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px;
+  width: auto;
+  height: auto;
+  border: none; }
+  input[name="build"]:active {
+    background-color: #333333; }
+
+section {
+  clear: both;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #cccccc; }
+
+textarea#output {
+  width: 100%;
+  height: 300px; }

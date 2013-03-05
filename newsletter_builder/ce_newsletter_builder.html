@@ -1,0 +1,104 @@
+
+<!DOCTYPE htm>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Add Resources to GUTS Site</title>
+<link href="newsletter_builder.css" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
+<link rel="shortcut icon" type="image/x-icon" href="http://guts.wisc.edu/images/favicon.png" />
+</head>
+
+<body>
+<div id="wrapper">
+<h1>GUTS CE Newsletter Builder</h1>
+<h2>STEP 1: Basic Info</h2>
+<section>
+<form id = "basic">
+    <div class="form_elem">
+        <label for="title">Title</label>
+        <label class="helper">e.g 'Exiciting CE Events This Week!'</label>
+        <input type="text" name="title"/>
+    </div>
+    <div class="form_elem">
+        <label for="issue">Date of Issue</label>
+        <label class="helper">e.g May 5th, 2013</label>
+        <input type="text" name="issue"/>
+    </div>
+
+    <h2>STEP 2: Add Stories</h2>
+    <div class="story" id="storyID1">
+        <div class="form_elem">
+            <label for="title">Story Title</label>
+            <label class="helper">e.g. CE Kickoff This Thursday</label>
+            <input type="text" name="title"/>
+        </div>
+        
+        <div class="form_elem">
+            <label for="description">Description</label>
+            <label class="helper">A short description of event. HTML links allowed.</label>
+            <textarea type="text" class="paragraph" name="description"></textarea>
+          </div>    
+
+        <div class="event_details form_elem">
+            <label for="event_details">Event?</label>
+            <label class="helper">Is this story an event or does it have date, time and venue details?</label>
+            <input type="radio" value="yes"class="event" name="eventID1"/> Yes
+            <input type="radio" value="no"class="event"  name="eventID1"/> No
+        </div>
+
+        <div class="form_elem, isevent" style="display:none">
+            <label for="date">Where and When?</label>
+            <label class="helper">Date, Time and Venue to event.</label>
+            <div class="dategroup">
+            
+            <div class="datesubgroup">
+                <label class="sublabel">Date</label>
+                <input type="text" name="date"/> 
+            </div>
+            <div class="datesubgroup">
+                <label class="sublabel">Time</label>
+                <input type="text" name="time"/> 
+            </div>
+            <div class="datesubgroup">
+                <label class="sublabel">Venue</label>
+                <input type="text" name="venue"/> 
+            </div>
+        </div>
+        </div>
+        
+        <div class="form_elem">
+            <label for="fileloc">Image URL</label>
+            <label class="helper">Image must be no larger than 300px by 300px and must be uploaded somewhere. Enter url below. Leave blank if no image desired</label>
+            <input type="text" name="fileloc"/>
+        </div>
+    </div>
+    
+    <div id="add_remove">
+        <input type="button" value="+" name="add_story"/>
+        <input type="button" value="-" name="remove_story"/>
+        <input type="button" value="Build!" name="build">
+    </div>
+</form>
+</section>
+
+<h2>Step 3: Preview</h2>
+<section id="preview">
+
+</section>
+<h2>Step 4: Get HTML code</h2>
+<section>
+<textarea id="output"></textarea>
+
+</section>
+
+
+</section>
+</div>
+
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="./newsletter_builder.js"></script>
+</body>
+</html>
