@@ -1,5 +1,6 @@
 // JavaScript Document
 
+var templateLocation = "../ce_template/newsletter_template.html";
 $(document).ready()
 {
     var form = $('#basic');
@@ -100,7 +101,7 @@ $(document).ready()
 
 
         //set body content
-        $(body).load("../newsletter_template.html", function()
+        $(body).load(templateLocation, function()
         {
             var bod = $frame.contents().find('body');
 
