@@ -113,8 +113,7 @@ $(document).ready()
             var stories = $('div.story').get();
 
             //content table to add stories to
-            var content = $("<table class='content'></table>").appendTo($('tr#contentrow', bod));
-
+            var content = $("<table class='content'></table>")
             for(var i = 0; i < stories.length; i++)
             {
                 var currStory = stories[i];
@@ -128,9 +127,7 @@ $(document).ready()
 
                 var htmlTr = $('<tr></tr>');
                 var htmlTd = $('<td></td>');
-                var storyTable = $('<table></table>');
-                
-
+                var storyTable = $('<table class="innerstorytable"></table>');
 
                 //TITLE AND DESCRIPTION
                 var thisRow = $(storyRowTemplate);
@@ -160,13 +157,17 @@ $(document).ready()
                 }
 
 
-                $(thisRow).appendTo(storyTable);
-                $(storyTable).appendTo(htmlTd);
-                $(htmlTd).appendTo(htmlTr);
+                $(thisRow).appendTo($(storyTable));
+                $(storyTable).appendTo($(htmlTd));
+                $(htmlTd).appendTo($(htmlTr));
 
                 $(content).append(htmlTr);
             }
-
+			
+			//add footer
+			$('tbody.maintable').append($('tr.tfoot'));
+			$('td#contentrow', bod).html(content);
+			
             //populate HTML output
             var newsletterHTML = $frame.contents().find('html').html();
             $("#output").val(newsletterHTML);

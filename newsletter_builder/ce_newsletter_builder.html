@@ -13,19 +13,19 @@
 
 <body>
 <div id="wrapper">
-<h1>Newsletter Builder - CE</h1>
+<h1>Newsletter Builder<br>GUTS CE</h1>
 <h2>STEP 1: Basic Info</h2>
 <section>
 <form id = "basic">
     <div class="form_elem">
         <label for="title">Title</label>
         <label class="helper">e.g 'Exiciting CE Events This Week!'</label>
-        <input type="text" value="{TITLE}" name="title"/>
+        <input type="text" name="title"/>
     </div>
     <div class="form_elem">
         <label for="issue">Date of Issue</label>
         <label class="helper">e.g May 5th, 2013</label>
-        <input type="text" value="{ISSUE}"  name="issue"/>
+        <input type="text"  name="issue"/>
     </div>
 
     <h2>STEP 2: Add Stories</h2>
@@ -33,12 +33,14 @@
         <div class="form_elem">
             <label for="title">Story Title</label>
             <label class="helper">e.g. CE Kickoff This Thursday</label>
-            <input type="text" name="title" value="{CE Kickoff This Thursday}"/>
+            <input type="text" name="title"/>
         </div>
         
         <div class="form_elem">
             <label for="description">Description</label>
-            <label class="helper">A short description of event. HTML links allowed.</label>
+            <label class="helper">A short description of event. HTML links allowed. How do I add links, you ask? Copy this and change as necessary, then paste it where you want it: 
+            <p class="code">&#60;a target="_blank" href="http://facebook.com"&#62;This is a link to Facebook!&#60;/a&#62;</p>
+            This will appear as:<a target="_blank" href="http://facebook.com">This is a link to Facebook!</a>. You may test links in the preview.</label>
             <textarea type="text" class="paragraph" name="description"></textarea>
           </div>    
 
@@ -56,15 +58,15 @@
             
             <div class="datesubgroup">
                 <label class="sublabel">Date</label>
-                <input type="text" name="date" value="May 15, 2013"/> 
+                <input type="text" name="date"/> 
             </div>
             <div class="datesubgroup">
                 <label class="sublabel">Time</label>
-                <input type="text" name="time" value="5pm to 6pm"/> 
+                <input type="text" name="time"/> 
             </div>
             <div class="datesubgroup">
                 <label class="sublabel">Venue</label>
-                <input type="text" name="venue" value="Memorial Union, TITU"/> 
+                <input type="text" name="venue"/> 
             </div>
         </div>
         </div>
@@ -98,9 +100,21 @@
 
 </section>
 
-
-</section>
-
+<h2> Step 5: Make it Gmail friendly</h2>
+<section>
+	<p>Some email clients like Gmail do not support external CSS stylesheets. So sending the above code in Step 4 to Gmail accounts will look ugly. Convert it to inline CSS. Here is how to do it:</p>
+    <ol>
+    <li>
+    	Grab the HTML code above</li>
+ 	<li>
+    	Go to this <a target="_blank" href="http://inlinestyler.torchboxapps.com/styler/convert/">website</a></li>
+    <li>Paste HTML code into top text area and convert</li>
+    <li>Grab converted HTML code with inline CSS in bottom box</li>
+    <li>Use this converted code in your newsletter. It will now appear correctly in Gmail</li>
+    </ol>
+    </section>
+<h2>Step 6: Done! You can send your newsletter out now!</h2>
+<section></section>
 <footer>
     <p>This Newsletter Builder was created by Sher Minn Chong, Webmaster at The Greater University Tutoring Service (GUTS) at the University of Wisconsin-Madison, 2012-2013. Contact her at sherminn[dot]chong[at]gmail[dot]com.</p>
 </footer>
