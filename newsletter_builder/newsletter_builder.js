@@ -1,6 +1,7 @@
 // JavaScript Document
 
 var templateLocation = "../ce_template/newsletter_template.html";
+var templateStyleLocation = "../ce_template/newsletter_style.css";
 $(document).ready()
 {
     var form = $('#basic');
@@ -96,7 +97,7 @@ $(document).ready()
 
         //set css in head
         var previewStyle = $('<style>');
-        $(previewStyle).load("../newsletter_style.css") ;
+        $(previewStyle).load(templateStyleLocation) ;
         $(head).html(previewStyle);
 
 
