@@ -63,9 +63,9 @@ a {
 ul#quicklinks {
   padding-bottom: 0;
   margin-bottom: 0;
-  text-align: right; }
+  text-align: right;
+  color: #aaaaaa; }
   ul#quicklinks li {
-    color: #333333;
     padding-left: 10px;
     padding-right: 10px;
     display: inline; }
