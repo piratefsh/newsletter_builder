@@ -1,7 +1,7 @@
 // JavaScript Document
 
-var templateLocation = "../ce_template/newsletter_template.html";
-var templateStyleLocation = "../ce_template/newsletter_style.css";
+var templateLocation = "../template/newsletter_template.html";
+var templateStyleLocation = "../template/newsletter_style.css";
 $(document).ready()
 {
     var form = $('#basic');
@@ -173,6 +173,7 @@ $(document).ready()
             //populate HTML output
             var newsletterHTML = $frame.contents().find('html').html();
             $("#output").val(newsletterHTML);
+
         });
     });
 };

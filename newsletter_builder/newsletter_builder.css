@@ -1,8 +1,7 @@
 body {
   font-family: "Source Sans", Helvetica, Arial, sans-serif;
   color: #444444;
-  font-size: 14px;
-  background: url(./imgs/ce_newsletter.png); }
+  background-color: #eeeeee; }
 
 h1 {
   text-align: center;
@@ -13,7 +12,7 @@ h1 {
 
 h2 {
   clear: both;
-  color: #f68c22; }
+  color: #00bbd6; }
 
 #wrapper {
   width: 650px;
@@ -26,10 +25,6 @@ form input, textarea {
   margin-top: 8px;
   border: 1px solid #cccccc;
   padding: 4px; }
-
-form input[type=text]{
-  width: 250px;
-}
 
 form div.story {
   background-color: #eeeeee;
@@ -73,6 +68,11 @@ label {
     font-size: small;
     display: inline; }
 
+a {
+  color: #00bbd6; }
+  a:hover {
+    color: #333333; }
+
 input[type="radio"] {
   display: inline; }
 input[type="button"] {
@@ -87,13 +87,13 @@ input[type="button"] {
   padding: 0;
   border: none; }
   input[type="button"]:hover {
-    background-color: #f68c22; }
+    background-color: #00bbd6; }
   input[type="button"]:active {
     color: #333333;
     background-color: #999999; }
 input[name="build"], input[name="show_preview"] {
   float: right;
-  background-color: #f68c22;
+  background-color: #00bbd6;
   clear: right;
   color: white;
   font-size: 18px;
@@ -125,12 +125,3 @@ footer p {
   font-size: small;
   font-style: italic;
   color: #666666; }
-
-p.code{
-  margin: 8px auto;
-  width: 500px;
-  color: #000;
-  font-style: normal;
-  font-family:"Courier New", Courier, monospace;
-  background-color: #fff;
-}

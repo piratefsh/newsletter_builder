@@ -1,11 +1,13 @@
 @charset "utf-8"
 
-$orange: #F68C22
+$blue: #00bbd6
+$dark-grey: #333333
+$light-grey: #eeeeee
 
 body
   font-family: 'Source Sans', Helvetica, Arial, sans-serif
   color: #444
-  background: url(../imgs/ce_newsletter.png)
+  background-color: $light-grey
 
 h1
   text-align: center
@@ -16,7 +18,7 @@ h1
 
 h2
   clear: both
-  color: $orange
+  color: $blue
 
 #wrapper
   width: 650px
@@ -73,12 +75,16 @@ label
     font-size: small
     display: inline
 
+a 
+  color: $blue
+  &:hover
+    color: $dark-grey
 input
   &[type="radio"]
     display: inline
   &[type="button"]
     &:hover
-      background-color: $orange
+      background-color: $blue
     &:active
       color: #333
       background-color: #999
@@ -97,7 +103,7 @@ input
     &:active
       background-color: #333
     float: right
-    background-color: #F68C22
+    background-color: $blue
     clear: right
     color: #fff
     font-size: 18px
